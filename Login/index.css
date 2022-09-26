@@ -16,6 +16,28 @@ body {
     flex-direction: row;
 }
 
+@media screen and (max-width: 768px) {
+    .LoginArea{
+        flex-direction:column;
+        width: 600px;
+        height: max-content;
+    }
+    .RightLoginArea{
+        margin-left: auto;
+        margin-right: auto;
+        height:500px
+    }
+    .LeffLoginArea img{
+        margin-top: 50px;
+    }
+    .BtLogin{
+        width: 200px;
+    }
+    .Writer img{
+        margin-right: 10px;
+    }
+}
+
 .Main {
     margin-top: 150px
 }
@@ -33,9 +55,6 @@ body {
 
 .RightLoginArea {
     width: 50%;
-    margin-left: auto;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 
 .Title {
@@ -121,4 +140,8 @@ body {
 }
 .Writer img:hover{
     cursor: pointer;
+}
+.RightLogin{
+    margin-left: auto;
+    margin-right: auto
 }
