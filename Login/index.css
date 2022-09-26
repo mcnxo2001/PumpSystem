@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background-image: url('https://r4.wallpaperflare.com/wallpaper/493/56/906/design-flower-art-graphic-wallpaper-9950088de1ea4dfb5697582fe0d1c65d.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.LoginArea {
+    width: 700px;
+    height: 450px;
+    background-color: #ffffffb0;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.Main {
+    margin-top: 150px
+}
+
+.LeffLoginArea {
+    margin: auto;
+}
+
+.LeffLoginArea img {
+    border: none;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.RightLoginArea {
+    width: 50%;
+    margin-left: auto;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.Title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top:100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Writer {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    position: relative;
+}
+
+.Writer input {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.BtLogin {
+    display: flex;
+    background-color: yellowgreen;
+    width: 300px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.BtLogin:hover {
+    cursor: pointer;
+    background-color: rgb(136, 182, 43);
+}
+
+.Linking {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Linking a {
+    text-decoration: none;
+    color: black;
+}
+
+.LoginForm {
+    position: relative;
+    height: 100%;
+}
+
+.Signup {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom:0;
+    margin-bottom: 20px;
+}
+.Signup a{
+    text-decoration: none;
+    color: black;
+}
+.ShowHide {
+    position: absolute;
+    width: 30px;
+    object-fit: cover;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+.Writer img:hover{
+    cursor: pointer;
+}
