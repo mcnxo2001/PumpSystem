@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url('https://r4.wallpaperflare.com/wallpaper/697/578/525/abstract-design-graphic-texture-wallpaper-7930382d91caed3b966778efa031664d.jpg');
+    background-image: url('https://r4.wallpaperflare.com/wallpaper/678/58/326/abstract-laser-optical-device-device-wallpaper-7910987db18a1d8b56a7d86f70c1d65d.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     zoom: 0.9;
@@ -150,22 +150,22 @@ body {
     margin-top: 20px;
     margin-left: auto;
     margin-bottom: 10px;
-    width: 70px;
-    height: 30px;
+    width: 100px;
+    height: 35px;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     background-color: rgb(43, 255, 0);
 }
 .ControlPanel{
-    background-color:red;
+    background-color:rgba(255, 0, 0, 0.521);
     height: 280px;
     border-radius:20px;
     padding-top: 10px;
     width: 400px;
 }
 .Monitoring{
-    background-color: yellowgreen;
+    background-color: rgba(153, 205, 50, 0.589);
     height: 280px;
     border-radius: 20px;
     padding-top: 10px;
