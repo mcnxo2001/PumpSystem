@@ -1,20 +1,20 @@
 var ShowHide = document.getElementById('ShowHide');
-var Password = document.getElementById('Password');
 var Username = document.getElementById('Username');
+
 var ShowHidePassword = true;
 
-ShowHide.addEventListener('click', function () {
+function ShowHideF() {
     if (ShowHidePassword == true) {
-        Password.type = 'text';
+        var Password = document.getElementById('Password').type = "text";
         ShowHide.src = "img/hide.jpg"
         ShowHidePassword = false;
     }
     else {
-        Password.type = 'password';
+        var Password = document.getElementById('Password').type = "password";
         ShowHide.src = "img/show.jpg"
         ShowHidePassword = true;
     }
-})
+}
 
 
 

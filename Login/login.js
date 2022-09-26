@@ -15,6 +15,7 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
 function Login() {
+
     Username = document.getElementById("Username").value;
     Password = document.getElementById("Password").value;
     if (Username == "" || Password == "") {
@@ -39,5 +40,3 @@ function Login() {
         );
     }
 }
-
-
