@@ -53,6 +53,7 @@ body {
         height:max-content;
         margin-left: 10px;
         margin-right: 10px;
+        margin-bottom: 10px;
     }
 }
 @media screen  and (min-width: 768px) {
