@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<script>
+    <? php
+        function generateToken() {
+            return base64_encode(random_bytes(64));
+        }
+
+        session_start(); // start a session to store this token
+        $_SESSION['token'] = generateToken(); // store the token temporarily in the session
+        // you can also store it in your database or in memcached if you prefer
+    ?>
+</script>
+
 <html lang="en">
 
 <head>

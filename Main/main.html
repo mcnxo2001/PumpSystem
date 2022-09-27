@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<script>
+    <? php
+    session_start(); // load the session data
+        if (empty($_SESSION['token']) ||
+            empty($_GET['token']) ||
+            $_GET['token'] !== $_SESSION['token']) {
+        echo "You did not reach this page by the link from page1!";
+            exit; // stop the page from loading
+        }
+    ?>
+</script>
+
 <html lang="en">
 
 <head>
