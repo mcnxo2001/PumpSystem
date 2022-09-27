@@ -14,6 +14,7 @@ var WaterLevel = document.getElementById('WaterLevel')
 var SpeedPump = document.getElementById('SpeedPump')
 var SendData = document.getElementById('SendData')
 var DataSpeed = document.getElementById('DataSpeed')
+var LogOut = document.getElementById('LogOut')
 
 var ActionMode = true;
 var ActivePump = false;
@@ -96,6 +97,10 @@ function SendDataSpeed() {
             alert("Write your speed Pumps Failed !!!");
         }
     }
+}
+
+function LogOutWeb() {
+    window.location = ("https://mcnxo2001.github.io/PumpSystem/Login/index.html");
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------

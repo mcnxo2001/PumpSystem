@@ -7,6 +7,7 @@ body {
 }
 
 .TopContent {
+    position: relative;
     font-size: 30px;
     font-weight: bold;
     color: white;
@@ -15,7 +16,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+.LogOut {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+.LogOut button {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(233, 5, 5, 0.829);
+    border-radius: 20px;
+    color: white;
+}
+
+.LogOut button:hover {
+    cursor: pointer;
 }
 
 .TopContentTheme {
@@ -27,7 +46,6 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    margin-top: 20px;
 }
 
 .MiddleContent {
@@ -36,28 +54,43 @@ body {
 
 .LeftMiddleContent {
     display: flex;
-    flex-direction:row;
-    justify-content:center
+    flex-direction: row;
+    justify-content: center
 }
 
 @media screen and (max-width: 768px) {
-    .LeftMiddleContent{
+    .LeftMiddleContent {
         flex-direction: column;
         align-items: center;
     }
-    .Monitoring{
+
+    .Monitoring {
         margin-top: 20px;
         margin-left: 0px;
     }
-    .TopContentTheme{
-        height:70px;
+
+    .TopContentTheme {
+        height: 70px;
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
     }
+
+    .TopContent {
+        flex-direction: column;
+    }
+
+    .LogOut {
+        position: static;
+    }
+
+    .MiddleContent {
+        padding-top: 20px;
+    }
 }
-@media screen  and (min-width: 768px) {
-    .Monitoring{
+
+@media screen and (min-width: 768px) {
+    .Monitoring {
         margin-left: 50px;
     }
 }
@@ -157,21 +190,24 @@ body {
     font-weight: bold;
     background-color: rgb(43, 255, 0);
 }
-.ControlPanel{
-    background-color:rgba(255, 0, 0, 0.521);
+
+.ControlPanel {
+    background-color: rgba(255, 0, 0, 0.521);
     height: 280px;
-    border-radius:20px;
+    border-radius: 20px;
     padding-top: 10px;
     width: 400px;
 }
-.Monitoring{
+
+.Monitoring {
     background-color: rgba(153, 205, 50, 0.589);
     height: 280px;
     border-radius: 20px;
     padding-top: 10px;
     width: 400px;
 }
-.OptionTheme{
+
+.OptionTheme {
     color: white;
     font-size: 22px;
     font-weight: bold;
