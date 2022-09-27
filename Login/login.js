@@ -35,7 +35,7 @@ function Login() {
             const data = snapshot.val();
             try {
                 if (Password == data.Password) {
-                    window.location = ("https://mcnxo2001.github.io/PumpSystem/Main/main.html");
+                    window.location = ("/Main/main.html");
                 }
                 else {
                     alert("Sign up failed !!!");
