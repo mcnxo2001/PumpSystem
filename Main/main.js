@@ -73,8 +73,6 @@ database.ref("/System/DirectionPump").on("value", function (snapshot) {
     }
 })
 
-SendData.addEventListener('click', SendDataSpeed())
-
 DataSpeed.addEventListener('keyup', function (e) {
     e.preventDefault();
     if (e.keyCode === 13) {
@@ -83,9 +81,21 @@ DataSpeed.addEventListener('keyup', function (e) {
 })
 
 function SendDataSpeed() {
-    database.ref("/System").update({
-        "SpeedPump": Number(DataSpeed.value)
-    })
+    var DataSpeed = document.getElementById('DataSpeed').value;
+    if (DataSpeed == "") {
+        alert("Please enter your speed Pumps !!!");
+    }
+    else {
+        try {
+            database.ref("/System").update({
+                "SpeedPump": Number(DataSpeed)
+            })
+        }
+        catch
+        {
+            alert("Write your speed Pumps Failed !!!");
+        }
+    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
