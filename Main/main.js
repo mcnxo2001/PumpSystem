@@ -73,11 +73,20 @@ database.ref("/System/DirectionPump").on("value", function (snapshot) {
     }
 })
 
-SendData.addEventListener('click', function () {
+SendData.addEventListener('click', SendDataSpeed())
+
+DataSpeed.addEventListener('keyup', function (e) {
+    e.preventDefault();
+    if (e.keyCode === 13) {
+        SendDataSpeed();
+    }
+})
+
+function SendDataSpeed() {
     database.ref("/System").update({
         "SpeedPump": Number(DataSpeed.value)
     })
-})
+}
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
