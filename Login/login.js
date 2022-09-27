@@ -14,6 +14,14 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
+
+Password.addEventListener('keyup', function (e) {
+    e.preventDefault();
+    if (e.keyCode === 13) {
+        Login();
+    }
+})
+
 function Login() {
 
     Username = document.getElementById("Username").value;
@@ -30,11 +38,11 @@ function Login() {
                     window.location = ("https://mcnxo2001.github.io/PumpSystem/Main/main.html");
                 }
                 else {
-                    alert("Signup failed !!!");
+                    alert("Sign up failed !!!");
                 }
             }
             catch(error){
-                alert("Signup failed !!!");
+                alert("Sign up failed !!!");
             }
         }
         );

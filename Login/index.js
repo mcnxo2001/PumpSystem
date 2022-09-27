@@ -1,6 +1,6 @@
 var ShowHide = document.getElementById('ShowHide');
 var Username = document.getElementById('Username');
-
+var Password = document.getElementById('Password');
 var ShowHidePassword = true;
 
 function ShowHideF() {
@@ -15,6 +15,7 @@ function ShowHideF() {
         ShowHidePassword = true;
     }
 }
+
 
 
 
