@@ -16,10 +16,7 @@ var SendData = document.getElementById('SendData')
 var DataSpeed = document.getElementById('DataSpeed')
 var LogOut = document.getElementById('LogOut')
 
-var ActionMode = true;
-var ActivePump = false;
-var Direction = true;
-
+var ActionMode = false;
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
@@ -40,38 +37,23 @@ firebase.analytics();
 
 var database = firebase.database();
 
-database.ref("/System/WaterLevel").on("value", function (snapshot) {
-    WaterLevel.innerHTML = snapshot.val();
+database.ref("/System/MonitorWaterLevel").on("value", function (snapshot) {
+    var MonitorWaterLevel = document.getElementById('MonitorWaterLevel')
+    MonitorWaterLevel.innerHTML = snapshot.val();
 })
 
-database.ref("/System/SpeedPump").on("value", function (snapshot) {
-    SpeedPump.innerHTML = snapshot.val();
+database.ref("/System/MonitorSpeed").on("value", function (snapshot) {
+    var MonitorSpeed = document.getElementById("MonitorSpeed")
+    MonitorSpeed.innerHTML = snapshot.val();
 })
 
-database.ref("/System/ActiveMode").on("value", function (snapshot) {
+database.ref("/System/MonitorMotorStatus").on("value", function (snapshot) {
+    var MonitorMotorStatus = document.getElementById('MonitorMotorStatus')
     if (snapshot.val() == true) {
-        StatusMode.innerHTML = "AUTO";
+        MonitorMotorStatus.innerHTML = "ON";
     }
     else {
-        StatusMode.innerHTML = "MANU";
-    }
-})
-
-database.ref("/System/ActivePump").on("value", function (snapshot) {
-    if (snapshot.val() == true) {
-        Status_Pump.innerHTML = "ON";
-    }
-    else {
-        Status_Pump.innerHTML = "OFF";
-    }
-})
-
-database.ref("/System/DirectionPump").on("value", function (snapshot) {
-    if (snapshot.val() == true) {
-        Status_Direction_Pump.innerHTML = "FORWARD";
-    }
-    else {
-        Status_Direction_Pump.innerHTML = "BACK";
+        MonitorMotorStatus.innerHTML = "OFF";
     }
 })
 
@@ -90,8 +72,9 @@ function SendDataSpeed() {
     else {
         try {
             database.ref("/System").update({
-                "SpeedPump": Number(DataSpeed)
+                "ControlSpeedPump": Number(DataSpeed)
             })
+            alert("Successfully !!!")
         }
         catch
         {
@@ -113,7 +96,7 @@ switch_button_Mode.addEventListener('click', function () {
         switch_button_Mode.style.marginLeft = '2.6rem';
         ActionMode = true;
         database.ref("/System").update({
-            "ActiveMode": true
+            "ControlMotorStatus": true
         })
     }
     else {
@@ -122,53 +105,9 @@ switch_button_Mode.addEventListener('click', function () {
         switch_button_Mode.style.marginLeft = '0.2rem';
         ActionMode = false;
         database.ref("/System").update({
-            "ActiveMode": false
-        })
-    }
-})
-
-switch_Pump_button_Mode.addEventListener('click', function () {
-    if (ActivePump == false) {
-        switch_Pump.style.backgroundColor = 'rgb(64, 240, 47)';
-        switch_Pump_button_Mode.style.backgroundColor = 'rgb(64, 190, 47)';
-        switch_Pump_button_Mode.style.marginLeft = '2.6rem';
-        ActivePump = true;
-        database.ref("/System").update({
-            "ActivePump": true
-        })
-    }
-    else {
-        switch_Pump.style.backgroundColor = 'gray';
-        switch_Pump_button_Mode.style.backgroundColor = 'rgba(255, 255, 255, 0.616)';
-        switch_Pump_button_Mode.style.marginLeft = '0.2rem';
-        ActivePump = false;
-        database.ref("/System").update({
-            "ActivePump": false
-        })
-    }
-})
-
-switch_button_Direction_Pump.addEventListener('click', function () {
-    if (Direction == false) {
-        switch_Direction_Pump.style.backgroundColor = 'rgb(64, 240, 47)';
-        switch_button_Direction_Pump.style.backgroundColor = 'rgb(64, 190, 47)';
-        switch_button_Direction_Pump.style.marginLeft = '2.6rem';
-        Direction = true;
-        database.ref("/System").update({
-            "DirectionPump": true
-        })
-    }
-    else {
-        switch_Direction_Pump.style.backgroundColor = 'gray';
-        switch_button_Direction_Pump.style.backgroundColor = 'rgba(255, 255, 255, 0.616)';
-        switch_button_Direction_Pump.style.marginLeft = '0.2rem';
-        Direction = false;
-        database.ref("/System").update({
-            "DirectionPump": false
+            "ControlMotorStatus": false
         })
     }
 })
 
 //--------------------------------------------------------------------------------------------------------------------------------
-
-

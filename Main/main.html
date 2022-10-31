@@ -1,18 +1,5 @@
 <!DOCTYPE html>
-<script>
-    <? php
-    session_start(); // load the session data
-        if (empty($_SESSION['token']) ||
-            empty($_GET['token']) ||
-            $_GET['token'] !== $_SESSION['token']) {
-        echo "You did not reach this page by the link from page1!";
-            exit; // stop the page from loading
-        }
-    ?>
-</script>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,8 +10,6 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
 </head>
 
@@ -40,21 +25,9 @@
             <div class="ControlPanel">
                 <div class="OptionTheme">Control Panel</div>
                 <div class="Option">
-                    <div class="Option_Title">ActiveMode</div>
+                    <div class="Option_Title">ControlMotorStatus</div>
                     <div class="switchON" id="switch_Mode">
                         <button id="switch_button_Mode"></button>
-                    </div>
-                </div>
-                <div class="Option">
-                    <div class="Option_Title">ActivePump</div>
-                    <div class="switch" id="switch_Pump">
-                        <button id="switch_Pump_button_Mode"></button>
-                    </div>
-                </div>
-                <div class="Option">
-                    <div class="Option_Title">DirectionPump</div>
-                    <div class="switchON" id="switch_Direction_Pump">
-                        <button id="switch_button_Direction_Pump"></button>
                     </div>
                 </div>
                 <div class="Option">
@@ -69,32 +42,22 @@
             <div class="Monitoring">
                 <div class="OptionTheme">Monitoring</div>
                 <div class="Option">
-                    <div class="Option_Title">ActiveMode</div>
-                    <div class="Status" id="StatusMode">Auto</div>
+                    <div class="Option_Title">MonitorMotorStatus</div>
+                    <div class="Status" id="MonitorMotorStatus"></div>
                 </div>
                 <div class="Option">
-                    <div class="Option_Title">ActivePump</div>
-                    <div class="Status" id="Status_Pump">OFF</div>
+                    <div class="Option_Title">MonitorSpeed</div>
+                    <div class="Status" id="MonitorSpeed"></div>
                 </div>
                 <div class="Option">
-                    <div class="Option_Title">DirectionPump</div>
-                    <div class="Status" id="Status_Direction_Pump">Forward</div>
-                </div>
-                <div class="Option">
-                    <div class="Option_Title">Water Lever</div>
-                    <div class="Status" id="WaterLevel"></div>
-                </div>
-
-                <div class="Option">
-                    <div class="Option_Title">SpeedPump</div>
-                    <div class="Status" id="SpeedPump"></div>
+                    <div class="Option_Title">MonitorWaterLevel</div>
+                    <div class="Status" id="MonitorWaterLevel"></div>
                 </div>
             </div>
 
         </div>
         <div class="RightMiddleContent"></div>
     </div>
-    <script src="main.js"></script>
 </body>
-
+<script src="main.js"></script>
 </html>
