@@ -24,6 +24,7 @@ body {
     position: absolute;
     right: 0;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 .LogOut button {
@@ -56,7 +57,25 @@ body {
 .LeftMiddleContent {
     display: flex;
     flex-direction: row;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
+}
+
+.ControlPanel {
+    background-color: rgba(255, 0, 0, 0.521);
+    height: 280px;
+    border-radius: 20px;
+    padding-top: 10px;
+    width: 400px;
+    margin-right: 40px;
+}
+
+.Monitoring {
+    background-color: rgba(153, 205, 50, 0.589);
+    height: 280px;
+    border-radius: 20px;
+    padding-top: 10px;
+    width: 400px;
 }
 
 @media screen and (max-width: 768px) {
@@ -93,6 +112,10 @@ body {
         padding-top: 20px;
         margin-left: auto;
         margin-right: auto
+    }
+
+    .ControlPanel {
+        margin-right: unset;
     }
 }
 
@@ -192,21 +215,7 @@ body {
     background-color: rgb(43, 255, 0);
 }
 
-.ControlPanel {
-    background-color: rgba(255, 0, 0, 0.521);
-    height: 280px;
-    border-radius: 20px;
-    padding-top: 10px;
-    width: 400px;
-}
 
-.Monitoring {
-    background-color: rgba(153, 205, 50, 0.589);
-    height: 280px;
-    border-radius: 20px;
-    padding-top: 10px;
-    width: 400px;
-}
 
 .OptionTheme {
     color: white;
