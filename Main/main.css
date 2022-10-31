@@ -12,11 +12,12 @@ body {
     font-weight: bold;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .LogOut {
@@ -70,28 +71,28 @@ body {
     }
 
     .TopContentTheme {
-        height: 70px;
+        height: 90px;
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
+        width: 400px;
     }
 
     .TopContent {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .LogOut {
         position: static;
+        margin-right: unset;
     }
 
     .MiddleContent {
         padding-top: 20px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .Monitoring {
-        margin-left: 50px;
+        margin-left: auto;
+        margin-right: auto
     }
 }
 
