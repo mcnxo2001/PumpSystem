@@ -50,10 +50,10 @@ database.ref("/System/MonitorSpeed").on("value", function (snapshot) {
 database.ref("/System/MonitorMotorStatus").on("value", function (snapshot) {
     var MonitorMotorStatus = document.getElementById('MonitorMotorStatus')
     if (snapshot.val() == true) {
-        MonitorMotorStatus.innerHTML = "ON";
+        MonitorMotorStatus.innerHTML = "AUTO";
     }
     else {
-        MonitorMotorStatus.innerHTML = "OFF";
+        MonitorMotorStatus.innerHTML = "MANU";
     }
 })
 
